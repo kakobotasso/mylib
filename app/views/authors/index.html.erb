@@ -1,0 +1,19 @@
+<table class="table table-bordered table-hover">
+  <thead>
+  	<tr>
+  	  <th><%= t('.nome') %></th>
+  	  <th>&nbsp;</th>
+      <th>&nbsp;</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<% @authors.each do |a| %>
+  	  <tr>
+  	  	<td><%= a.name %></td>
+  	  	<td><%= link_to(t('.editar'), edit_author_path(a)) %></td>
+        <td><%= link_to(t('.deletar'), authors_path(a), method: :delete, data: {confirm: t('.confirmacao')} ) %></td>
+  	  </tr>
+  	<% end %>
+  </tbody>
+  <%= link_to(t('authors.novo'), new_author_path) %>
+</table>

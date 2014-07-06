@@ -1,0 +1,11 @@
+'pt-BR':
+  authors:
+    voltar: 'Voltar'
+    novo: 'Novo autor'
+    index:
+      nome: 'Nome do autor'
+      editar: 'Editar autor'
+      deletar: 'Deletar autor'
+      confirmacao: 'Tem certeza que deseja excluir este autor?'
+    edit:
+      editar: 'Editar autor'
