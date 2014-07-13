@@ -11,35 +11,49 @@
     </div>
   <% end %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br/>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+    <br/>
+  </div>
 
-  <%= f.label :author_id %>
-  <%= f.collection_select :author_id, @authors, :id, :name, {:prompt => t('.selecione') } %>
-  <br/>
+  <div class="form-group">
+    <%= f.label :author_id %>
+    <%= f.collection_select :author_id, @authors, :id, :name, {:prompt => t('.selecione') }, class: 'form-control' %>
+    <br/>
+  </div>
 
-  <%= f.label :grade %>
-  <%= f.text_field :grade %>
-  <br/>
+  <div class="form-group">
+    <%= f.label :grade %>
+    <%= f.text_field :grade, class: 'form-control' %>
+    <br/>
+  </div>
 
-  <%= f.label :wishlist %>
-  <%= f.radio_button :wishlist, true, checked: true %>
-  <%= label :wishlist_true, t('books.sim') %>
-  <%= f.radio_button :wishlist, false %>
-  <%= label :wishlist_false, t('books.nao') %>
-  <br/>
+  <div class="form-group">
+    <%= f.label :wishlist %> <br/>
+    <%= f.radio_button :wishlist, true, checked: true %>
+    <%= label :wishlist_true, t('books.sim') %>
+    <%= f.radio_button :wishlist, false %>
+    <%= label :wishlist_false, t('books.nao') %>
+    <br/>
+  </div>
 
-  <%= f.label :link %>
-  <%= f.text_field :link %>
-  <br/>
+  <div class="form-group">
+    <%= f.label :link %>
+    <%= f.text_field :link, class: 'form-control' %>
+    <br/>
+  </div>
 
-  <%= f.label :read %>
-  <%= f.radio_button :read, true %>
-  <%= label :read_true, t('books.sim') %>
-  <%= f.radio_button :read, false, checked: true %>
-  <%= label :read_false, t('books.nao') %>
-  <br/>
+  <div class="form-group">
+    <%= f.label :read %><br/>
+    <%= f.radio_button :read, true %>
+    <%= label :read_true, t('books.sim') %>
+    <%= f.radio_button :read, false, checked: true %>
+    <%= label :read_false, t('books.nao') %>
+    <br/>
+  </div>
 
-  <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit nil, class: 'btn btn-success' %>
+  </div>
 <% end %>

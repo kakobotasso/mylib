@@ -17,9 +17,9 @@
         <td><%= b.grade %></td>
         <td><%= b.wishlist %></td>
         <td><%= b.read %></td>
-        <td><%= link_to(t('.editar'), edit_book_path(b)) %></td>
+        <td><%= link_to(t('.editar'), edit_book_path(b), class: 'btn btn-warning btn-sm') %></td>
       </tr>
     <% end %>
   </tbody>
-  <%= link_to(t('books.novo'), new_book_path) %>
+  <%= link_to(t('books.novo'), new_book_path, class: 'btn btn-primary') %>
 </table>
