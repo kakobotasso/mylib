@@ -8,10 +8,13 @@
 </head>
 <body>
 
-<ul>
-  <li><%= link_to(t('.menu_autores'), authors_path) %></li>
-  <li><%= link_to(t('.menu_livros'), books_path) %></li>
-</ul>
+<% if logged_in? %>
+  <ul>
+    <li><%= link_to(t('.menu_autores'), authors_path) %></li>
+    <li><%= link_to(t('.menu_livros'), books_path) %></li>
+    <li><%= link_to(t('.menu_logout'), logout_path) %></li>
+  </ul>
+<% end %>
 
 <%= yield %>
 

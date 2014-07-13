@@ -15,3 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'bcrypt', '~> 3.1.7'
+
+group :production do
+  gem 'pg'
+end

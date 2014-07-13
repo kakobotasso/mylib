@@ -3,3 +3,4 @@
     application:
       menu_autores: 'Autores'
       menu_livros: 'Livros'
+      menu_logout: 'Sair'

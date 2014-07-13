@@ -1,0 +1,19 @@
+<%= form_tag login_path do %>
+  <% if flash[:notice] %>
+    <div id="errorNotice"><%= flash[:notice] %></div>
+  <% end %>
+
+  <ul>
+    <li>
+      <span>Login:</span>
+      <%= text_field_tag :login, "", :class => "text" %>
+    </li>
+
+    <li>
+      <span>Password:</span>
+      <%= password_field_tag :password, "", :class => "text" %>
+    </li>
+
+    <li><%= submit_tag("Login", id: 'login', class: 'btn btn-primary') %></li>
+  </ul>
+<% end %>
