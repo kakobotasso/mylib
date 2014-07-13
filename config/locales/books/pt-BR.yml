@@ -1,0 +1,19 @@
+'pt-BR':
+  books:
+    sim: 'Sim'
+    nao: 'Não'
+    voltar: 'Voltar'
+    novo: 'Novo livro'
+    index:
+      nome: 'Nome do livro'
+      editar: 'Editar livro'
+      deletar: 'Deletar livro'
+      autor: 'Autor do Livro'
+      nota: 'Nota'
+      lista: 'Lista de Desejos?'
+      lido: 'Lido?'
+      confirmacao: 'Tem certeza que deseja excluir este livro?'
+    edit:
+      editar: 'Editar livro'
+    form:
+      selecione: 'Selecione um autor'

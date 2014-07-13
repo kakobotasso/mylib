@@ -1,0 +1,12 @@
+'pt-BR':
+  activerecord:
+    models:
+      book: 'Livro'
+    attributes:
+      book:
+        name: 'Nome'
+        author_id: 'Autor'
+        grade: 'Nota'
+        wishlist: 'Lista de desejos'
+        link: 'Link'
+        read: 'Lido'

@@ -1,0 +1,45 @@
+<%= form_for @book do |f| %>
+
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <p id="labelErrors">Ops!</p>
+      <ul>
+        <% @book.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br/>
+
+  <%= f.label :author_id %>
+  <%= f.collection_select :author_id, @authors, :id, :name, {:prompt => t('.selecione') } %>
+  <br/>
+
+  <%= f.label :grade %>
+  <%= f.text_field :grade %>
+  <br/>
+
+  <%= f.label :wishlist %>
+  <%= f.radio_button :wishlist, true, checked: true %>
+  <%= label :wishlist_true, t('books.sim') %>
+  <%= f.radio_button :wishlist, false %>
+  <%= label :wishlist_false, t('books.nao') %>
+  <br/>
+
+  <%= f.label :link %>
+  <%= f.text_field :link %>
+  <br/>
+
+  <%= f.label :read %>
+  <%= f.radio_button :read, true %>
+  <%= label :read_true, t('books.sim') %>
+  <%= f.radio_button :read, false, checked: true %>
+  <%= label :read_false, t('books.nao') %>
+  <br/>
+
+  <%= f.submit %>
+<% end %>
