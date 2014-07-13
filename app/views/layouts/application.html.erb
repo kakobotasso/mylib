@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<ul>
+  <li><%= link_to(t('.menu_autores'), authors_path) %></li>
+  <li><%= link_to(t('.menu_livros'), books_path) %></li>
+</ul>
+
 <%= yield %>
 
 </body>
