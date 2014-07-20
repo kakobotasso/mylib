@@ -15,6 +15,28 @@
  *= require_self
  */
 
+body{
+  background:#CFCFCF;
+}
+
+.bg-autores{
+  background:#00688B;
+  color:#fff;
+}
+
+.bg-livros{
+  background:#008B8B;
+  color:#fff;
+}
+
+h1, 
+h1 a, 
+h1 a:hover{
+  font:70px 'Berkshire Swash', Helvetica, sans-serif; 
+  color:#428bca;
+  text-decoration: none;
+}
+
 #container{
   width:998px;
   margin:0 auto;
@@ -24,4 +46,48 @@
   float:left;
   width:100%;
   padding:30px 0px 0px 0px;
+}
+
+#menuTopo{
+  float:left;
+  width:100%;
+  padding:15px 0px;
+}
+
+#menuTopo ul, 
+#menuTopo ul li{ 
+  list-style-type: none; 
+}
+
+#menuTopo ul{
+  float:left;
+  width:100%;
+  padding:0px;
+  background:#4F4F4F;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#menuTopo ul li{
+  float:left;
+  width:25%;
+  height:40px;
+}
+
+#menuTopo ul li a{
+  float:left;
+  width:100%;
+  text-align:center;
+  padding:10px 0px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color:#7EC0EE;
+  font-family:'Prelo';
+  font-size:16px;
+}
+
+#menuTopo ul li a:hover{
+  background:#EFEFEF;
 }
