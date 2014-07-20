@@ -18,8 +18,14 @@
     new:
       title: 'Novo livro'
       aviso: 'Você deve cadastrar um autor primeiro'
+    create:
+      salvo_sucesso: 'Livro salvo com sucesso'
     edit:
       title: 'Editar livro'
       editar: 'Editar livro'
+    update:
+      atualizado_sucesso: 'Livro atualizado com sucesso'
+    destroy:
+      deletado_sucesso: 'Livro deletado com sucesso'
     form:
       selecione: 'Selecione um autor'

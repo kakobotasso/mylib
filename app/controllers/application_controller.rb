@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user, :logged_in?, :is_admin?
+  add_flash_types :success
 
   private
   def logged_in?

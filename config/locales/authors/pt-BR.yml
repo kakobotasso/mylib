@@ -12,6 +12,12 @@
       confirmacao: 'Tem certeza que deseja excluir este autor?'
     new:
       title: 'Novo autor'
+    create:
+      salvo_sucesso: 'Autor salvo com sucesso'
     edit:
       title: 'Editar autor'
       editar: 'Editar autor'
+    update:
+      atualizado_sucesso: 'Autor atualizado com sucesso'
+    destroy:
+      deletado_sucesso: 'Autor deletado com sucesso'

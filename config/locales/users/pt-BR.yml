@@ -15,3 +15,10 @@
     edit:
       title: 'Editar usuário'
       editar: 'Editar usuário'
+    create:
+      salvo_sucesso: 'Usuário salvo com sucesso'
+    update:
+      atualizado_sucesso: 'Usuário atualizado com sucesso'
+    destroy:
+      deletado_sucesso: 'Usuário deletado com sucesso'
+    

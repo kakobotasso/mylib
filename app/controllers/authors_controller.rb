@@ -15,7 +15,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
 
     if @author.save
-      redirect_to authors_path
+      redirect_to authors_path, success: t('authors.create.salvo_sucesso')
     else
       render :new
     end
@@ -29,7 +29,7 @@ class AuthorsController < ApplicationController
   def update
     @author = Author.find(params[:id])
     if @author.update_attributes(author_params)
-      redirect_to authors_path
+      redirect_to authors_path, success: t('authors.update.atualizado_sucesso')
     else
       render :edit
     end 
@@ -39,7 +39,7 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
     @author.destroy
  
-    redirect_to authors_path
+    redirect_to authors_path, success: t('authors.destroy.deletado_sucesso')
   end
 
   private

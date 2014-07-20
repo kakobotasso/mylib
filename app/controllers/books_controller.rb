@@ -20,7 +20,7 @@ class BooksController < ApplicationController
     @authors = Author.where(user_id: @current_user).order(:name)
 
     if @book.save
-      redirect_to books_path
+      redirect_to books_path, success: t('books.create.salvo_sucesso')
     else
       render :new
     end
@@ -37,7 +37,7 @@ class BooksController < ApplicationController
     @authors = Author.where(user_id: @current_user).order(:name)
 
     if @book.update_attributes(book_params)
-      redirect_to books_path
+      redirect_to books_path, success: t('books.update.atualizado_sucesso')
     else
       render :edit
     end 
@@ -47,7 +47,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.destroy
  
-    redirect_to books_path
+    redirect_to books_path, success: t('books.destroy.deletado_sucesso')
   end
 
   private

@@ -101,6 +101,23 @@ ul, ul li{
   border:1px solid #CD950C;
   color:#CD950C;
 }
+
+#successNotice{
+  float:left;
+  width:100%;
+  padding-left:18px;
+}
+
+#successNotice p{
+  float:left;
+  width:95%;
+  padding:10px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid #008B00;
+  color:#008B00;
+}
 /* / FLASH MESSAGES */
 
 /* BOX LOGIN */
