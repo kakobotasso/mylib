@@ -17,6 +17,7 @@
       confirmacao: 'Tem certeza que deseja excluir este livro?'
     new:
       title: 'Novo livro'
+      aviso: 'Você deve cadastrar um autor primeiro'
     edit:
       title: 'Editar livro'
       editar: 'Editar livro'

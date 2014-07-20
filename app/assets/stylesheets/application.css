@@ -67,6 +67,7 @@ ul, ul li{
   list-style-type: none; 
 }
 
+/* FLASH MESSAGES */
 #errorNotice{
   float:left;
   width:100%;
@@ -83,6 +84,24 @@ ul, ul li{
   border:1px solid #B22222;
   color:#B22222;
 }
+
+#alertNotice{
+  float:left;
+  width:100%;
+  padding-left:18px;
+}
+
+#alertNotice p{
+  float:left;
+  width:95%;
+  padding:10px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid #CD950C;
+  color:#CD950C;
+}
+/* / FLASH MESSAGES */
 
 /* BOX LOGIN */
 #boxLogin{

@@ -1,3 +1,9 @@
+<% if flash[:alert] %>
+  <div id="alertNotice">
+    <p class="bg-warning"><%= flash[:alert] %></p>
+  </div>
+<% end %>
+
 <table class="table table-bordered table-hover">
   <thead class="bg-autores">
   	<tr>
