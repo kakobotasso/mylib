@@ -3,19 +3,24 @@
   	<tr>
   	  <th><%= t('.nome') %></th>
       <th><%= t('.quantidade') %></th>
-  	  <th>&nbsp;</th>
-      <th>&nbsp;</th>
+  	  <th colspan="2">&nbsp;</th>
   	</tr>
   </thead>
   <tbody>
-  	<% @authors.each do |a| %>
-  	  <tr>
-  	  	<td><%= a.name %></td>
-        <td><%= a.books.where(user_id: session[:user_id]).size %></td>
-  	  	<td><%= link_to(t('.editar'), edit_author_path(a), class: 'btn btn-warning btn-sm') %></td>
-        <td><%= link_to(t('.deletar'), authors_path(a), method: :delete, data: {confirm: t('.confirmacao')}, class: 'btn btn-danger btn-sm' ) %></td>
-  	  </tr>
-  	<% end %>
+    <% if @authors.any? %>
+    	<% @authors.each do |a| %>
+    	  <tr>
+    	  	<td><%= a.name %></td>
+          <td><%= a.books.where(user_id: session[:user_id]).size %></td>
+    	  	<td><%= link_to(t('.editar'), edit_author_path(a), class: 'btn btn-warning btn-sm') %></td>
+          <td><%= link_to(t('.deletar'), authors_path(a), method: :delete, data: {confirm: t('.confirmacao')}, class: 'btn btn-danger btn-sm' ) %></td>
+    	  </tr>
+    	<% end %>
+    <% else %>
+      <tr>
+        <td class="text-center" colspan="4"><%= t('.vazio') %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 <%= link_to(t('authors.novo'), new_author_path, class: 'btn btn-primary') %>

@@ -1,0 +1,27 @@
+<table class="table table-bordered table-hover">
+  <thead class="bg-autores">
+    <tr>
+      <th class="text-center" colspan="2"><%= titulo %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if colecao.any? %>
+      <% colecao.each do |a| %>
+        <tr>
+          <td class="col-md-8"><%= a.name %></td>
+          <td class="col-md-4"><%= a.books.where(user_id: session[:user_id]).size %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr>
+        <td class="text-center" colspan="2"><%= vazio %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if colecao.any? %>
+  <%= link_to(t('.ver_autores'), authors_path, class: 'btn btn-primary') %>
+<% else %>
+  <%= link_to(t('.novo_autor'), new_author_path, class: 'btn btn-primary') %>
+<% end %>

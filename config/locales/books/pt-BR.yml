@@ -13,6 +13,7 @@
       nota: 'Nota'
       lista: 'Lista de Desejos?'
       lido: 'Lido?'
+      vazio: 'Nenhum livro cadastrado'
       confirmacao: 'Tem certeza que deseja excluir este livro?'
     new:
       title: 'Novo livro'

@@ -3,7 +3,14 @@
     index:
       title: 'Bem Vindo!'
       ultimos_adicionados: 'Últimos livros adicionados'
+      ultimos_adicionados_vazios: 'Nenhum livro adicionado'
       ultimos_lidos: 'Últimos livros lidos'
+      ultimos_lidos_vazio: 'Nenhum livro lido'
       ultimos_autores: 'Últimos autores adicionados'
+      ultimos_autores_vazio: 'Nenhum autor adicionado'
+    tabela_livros:
       ver_livros: 'Ver todos os livros'
+      novo_livro: 'Adicionar um livro'
+    tabela_autores:
       ver_autores: 'Ver todos os autores'
+      novo_autor: 'Adicionar um autor'

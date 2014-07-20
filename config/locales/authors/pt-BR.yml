@@ -8,6 +8,7 @@
       quantidade: 'Quantidade de livros'
       editar: 'Editar autor'
       deletar: 'Deletar autor'
+      vazio: 'Nenhum autor cadastrado'
       confirmacao: 'Tem certeza que deseja excluir este autor?'
     new:
       title: 'Novo autor'

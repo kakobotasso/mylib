@@ -1,60 +1,22 @@
 <div>
-  <table class="table table-bordered table-hover">
-    <thead class="bg-livros">
-      <tr>
-        <th class="text-center" colspan="3"><%= t('.ultimos_adicionados') %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @ultimos_adicionados.each do |b| %>
-        <tr>
-          <td class="col-md-4"><%= link_to(b.name, b.link, target: '_blank') %></td>
-          <td class="col-md-4"><%= b.author.name %></td>
-          <td class="col-md-4"><%= b.grade %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <%= link_to(t('.ver_livros'), books_path, class: 'btn btn-primary') %>
+  <%= render 'tabela_livros', 
+        colecao: @ultimos_adicionados, 
+        titulo: t('.ultimos_adicionados'), 
+        vazio: t('.ultimos_adicionados_vazios') %>
 </div>
 
 <div class="separaDivs">
   <div class="col-md-6">
-    <table class="table table-bordered table-hover">
-      <thead class="bg-livros">
-        <tr>
-          <th class="text-center" colspan="3"><%= t('.ultimos_lidos') %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @ultimos_lidos.each do |b| %>
-          <tr>
-            <td class="col-md-4"><%= link_to(b.name, b.link, target: '_blank') %></td>
-            <td class="col-md-4"><%= b.author.name %></td>
-            <td class="col-md-4"><%= b.grade %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <%= link_to(t('.ver_livros'), books_path, class: 'btn btn-primary') %>
+    <%= render 'tabela_livros', 
+          colecao: @ultimos_lidos,
+          titulo: t('.ultimos_lidos'),
+          vazio: t('.ultimos_lidos_vazio') %>
   </div>
 
   <div class="col-md-6">
-    <table class="table table-bordered table-hover">
-      <thead class="bg-autores">
-        <tr>
-          <th class="text-center" colspan="3"><%= t('.ultimos_autores') %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @ultimos_autores.each do |a| %>
-          <tr>
-            <td class="col-md-8"><%= a.name %></td>
-            <td class="col-md-4"><%= a.books.where(user_id: session[:user_id]).size %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <%= link_to(t('.ver_autores'), authors_path, class: 'btn btn-primary') %>
+    <%= render 'tabela_autores', 
+          colecao: @ultimos_autores,
+          titulo: t('.ultimos_autores'),
+          vazio: t('.ultimos_autores_vazio') %>
   </div>
 </div>

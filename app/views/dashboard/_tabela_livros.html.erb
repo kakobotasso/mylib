@@ -1,0 +1,28 @@
+<table class="table table-bordered table-hover">
+  <thead class="bg-livros">
+    <tr>
+      <th class="text-center" colspan="3"><%= titulo %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if colecao.any? %>
+      <% colecao.each do |b| %>
+        <tr>
+          <td class="col-md-4"><%= link_to(b.name, b.link, target: '_blank') %></td>
+          <td class="col-md-4"><%= b.author.name %></td>
+          <td class="col-md-4"><%= b.grade %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr>
+        <td class="text-center" colspan="3"><%= vazio %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if colecao.any? %>
+  <%= link_to(t('.ver_livros'), books_path, class: 'btn btn-primary') %>
+<% else %>
+  <%= link_to(t('.novo_livro'), new_book_path, class: 'btn btn-primary') %>
+<% end %>
