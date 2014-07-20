@@ -1,4 +1,4 @@
-<div class="center-block">
+<div id="boxLogin" class="center-block">
   <%= form_tag login_path do %>
     <% if flash[:notice] %>
       <div id="errorNotice">
@@ -8,16 +8,14 @@
 
     <ul>
       <li>
-        <span>Login:</span>
-        <%= text_field_tag :login, "", :class => "text" %>
+        <%= text_field_tag :login, "", class: 'form-control', placeholder: 'Login' %>
       </li>
 
       <li>
-        <span>Password:</span>
-        <%= password_field_tag :password, "", :class => "text" %>
+        <%= password_field_tag :password, "", class: 'form-control', placeholder: 'Password' %>
       </li>
 
-      <li><%= submit_tag(t('.login'), id: 'login', class: 'btn btn-primary') %></li>
+      <li id='btLogin'><%= submit_tag(t('.login'), class: 'btn btn-primary') %></li>
     </ul>
   <% end %>
 </div>

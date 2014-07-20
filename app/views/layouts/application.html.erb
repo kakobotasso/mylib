@@ -10,8 +10,8 @@
 </head>
 <body>
 
-<div id="container">
-  <h1>
+<div id="container" <%= "class=logoHome" unless logged_in? %>>
+  <h1 <%= "class=logoHome" unless logged_in? %>>
     <%= link_to(t('geral.app_name'), dashboard_path) %>
   </h1>
 

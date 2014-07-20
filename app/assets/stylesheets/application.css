@@ -37,9 +37,19 @@ h1 a:hover{
   text-decoration: none;
 }
 
+h1.logoHome{
+  float:left;
+  width:100%;
+  text-align:center;
+}
+
 #container{
   width:998px;
   margin:0 auto;
+}
+
+#container.logoHome{
+  margin-top:50px;
 }
 
 .separaDivs{
@@ -48,15 +58,40 @@ h1 a:hover{
   padding:30px 0px 0px 0px;
 }
 
+ul, ul li{ 
+  list-style-type: none; 
+}
+
+/* BOX LOGIN */
+#boxLogin{
+  width:400px;
+  margin:0 auto;
+  background:#EFEFEF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#boxLogin ul{
+  width:100%;
+  padding:15px 0px 5px 0px;
+}
+
+#boxLogin ul li{
+  width:96%;
+  padding:0px 0px 10px 15px;
+}
+
+#boxLogin ul li#btLogin{
+  text-align:right;
+}
+/* /  BOX LOGIN */
+
+/* MENU TOPO */
 #menuTopo{
   float:left;
   width:100%;
   padding:15px 0px;
-}
-
-#menuTopo ul, 
-#menuTopo ul li{ 
-  list-style-type: none; 
 }
 
 #menuTopo ul{
@@ -91,3 +126,4 @@ h1 a:hover{
 #menuTopo ul li a:hover{
   background:#EFEFEF;
 }
+/* / MENU TOPO */
