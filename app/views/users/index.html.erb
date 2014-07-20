@@ -1,0 +1,21 @@
+<table class="table table-bordered table-hover">
+  <thead class="bg-usuarios">
+    <tr>
+      <th><%= t('.nome') %></th>
+      <th><%= t('.email') %></th>
+      <th><%= t('.usuario') %></th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td><%= u.name %></td>
+        <td><%= u.email %></td>
+        <td><%= u.login %></td>
+        <td><%= link_to(t('.editar'), edit_user_path(u), class: 'btn btn-warning btn-sm') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to(t('users.novo'), new_user_path, class: 'btn btn-primary') %>

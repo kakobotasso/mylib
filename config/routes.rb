@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :authors
   resources :books
+  resources :users
 
   controller :sessions do
     get  "/",  :action => :new,     :as => :login

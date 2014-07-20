@@ -29,6 +29,11 @@ body{
   color:#fff;
 }
 
+.bg-usuarios{
+  background:#696969;
+  color:#fff;
+}
+
 h1, 
 h1 a, 
 h1 a:hover{
@@ -108,6 +113,10 @@ ul, ul li{
   float:left;
   width:25%;
   height:40px;
+}
+
+#menuTopo ul.isAdmin li{
+  width:20%;
 }
 
 #menuTopo ul li a{

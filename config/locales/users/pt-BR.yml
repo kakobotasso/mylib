@@ -1,0 +1,17 @@
+'pt-BR':
+  users:
+    voltar: 'Voltar'
+    novo: 'Novo usuário'
+    index:
+      title: 'Usuários'
+      nome: 'Nome'
+      email: 'E-mail'
+      usuario: 'Usuário'
+      editar: 'Editar usuário'
+      deletar: 'Deletar usuário'
+      confirmacao: 'Tem certeza que deseja excluir este usuário?'
+    new:
+      title: 'Novo usuário'
+    edit:
+      title: 'Editar usuário'
+      editar: 'Editar usuário'

@@ -17,10 +17,13 @@
 
   <% if logged_in? %>
     <div id="menuTopo">
-      <ul>
+      <ul <%= "class=isAdmin" if is_admin? %>>
         <li><%= link_to(t('.menu_home'), dashboard_path) %></li>
         <li><%= link_to(t('.menu_autores'), authors_path) %></li>
         <li><%= link_to(t('.menu_livros'), books_path) %></li>
+        <% if is_admin? %>
+          <li><%= link_to(t('.menu_usuarios'), users_path) %></li>
+        <% end %>
         <li><%= link_to(t('.menu_logout'), logout_path) %></li>
       </ul>
     </div>
