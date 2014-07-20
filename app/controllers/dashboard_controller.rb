@@ -1,4 +1,6 @@
 class DashboardController < ApplicationController
+  before_filter :require_logged_user
+  
   def index
     @title = I18n.t('dashboard.index.title')
     @ultimos_adicionados = Book.limit(5).order('id DESC')

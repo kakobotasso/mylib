@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_filter :require_logged_user
+  
   def index
     @title = I18n.t('books.index.title')
     @books = Book.all

@@ -1,4 +1,6 @@
 class AuthorsController < ApplicationController
+  before_filter :require_logged_user
+  
   def index
     @title = I18n.t('authors.index.title')
   	@authors = Author.all
