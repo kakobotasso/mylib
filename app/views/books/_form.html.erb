@@ -1,14 +1,7 @@
 <%= form_for @book do |f| %>
 
   <% if @book.errors.any? %>
-    <div id="error_explanation">
-      <p id="labelErrors">Ops!</p>
-      <ul>
-        <% @book.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+    <%= render 'shared/form_errors', form: @book %>
   <% end %>
 
   <div class="form-group">

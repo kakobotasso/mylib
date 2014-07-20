@@ -1,14 +1,7 @@
 <%= form_for @author do |f| %>
 
   <% if @author.errors.any? %>
-    <div id="error_explanation">
-      <p id="labelErrors">Ops!</p>
-      <ul>
-        <% @author.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+    <%= render 'shared/form_errors', form: @author %>
   <% end %>
 
   <div class="form-group">

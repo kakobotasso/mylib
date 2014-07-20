@@ -1,0 +1,9 @@
+<div id="errorNotice">
+  <p class="bg-danger">
+    <span>Ops!<br/></span>
+    <% form.errors.full_messages.each do |msg| %>
+      <span><%= msg %></span>
+      <br/>
+    <% end %>
+  </p>
+</div>
