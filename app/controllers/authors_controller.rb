@@ -3,7 +3,7 @@ class AuthorsController < ApplicationController
   
   def index
     @title = I18n.t('authors.index.title')
-  	@authors = Author.all
+  	@authors = Author.where(user_id: @current_user)
   end
 
   def new
@@ -44,6 +44,6 @@ class AuthorsController < ApplicationController
 
   private
   def author_params
-    params.require(:author).permit(:name)
+    params.require(:author).permit(:name).merge!({user_id: session[:user_id]})
   end
 end

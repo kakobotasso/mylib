@@ -50,7 +50,7 @@
         <% @ultimos_autores.each do |a| %>
           <tr>
             <td class="col-md-8"><%= a.name %></td>
-            <td class="col-md-4"><%= a.books.size %></td>
+            <td class="col-md-4"><%= a.books.where(user_id: session[:user_id]).size %></td>
           </tr>
         <% end %>
       </tbody>

@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :authors
+  has_many :books
 
   validates :name, presence: true
   validates :email, presence: true

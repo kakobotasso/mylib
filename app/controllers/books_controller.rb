@@ -3,18 +3,18 @@ class BooksController < ApplicationController
   
   def index
     @title = I18n.t('books.index.title')
-    @books = Book.all
+    @books = Book.where(user_id: @current_user)
   end
 
   def new
     @title = I18n.t('books.new.title')
     @book = Book.new
-    @authors = Author.order(:name)
+    @authors = Author.where(user_id: @current_user).order(:name)
   end
 
   def create
     @book = Book.new(book_params)
-    @authors = Author.order(:name)
+    @authors = Author.where(user_id: @current_user).order(:name)
 
     if @book.save
       redirect_to books_path
@@ -26,12 +26,12 @@ class BooksController < ApplicationController
   def edit
     @title = I18n.t('books.edit.title')
     @book = Book.find(params[:id])
-    @authors = Author.order(:name)
+    @authors = Author.where(user_id: @current_user).order(:name)
   end
 
   def update
     @book = Book.find(params[:id])
-    @authors = Author.order(:name)
+    @authors = Author.where(user_id: @current_user).order(:name)
 
     if @book.update_attributes(book_params)
       redirect_to books_path
@@ -49,6 +49,6 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:name, :author_id, :grade, :wishlist, :link, :read)
+    params.require(:book).permit(:name, :author_id, :grade, :wishlist, :link, :read).merge!({user_id: session[:user_id]})
   end
 end
