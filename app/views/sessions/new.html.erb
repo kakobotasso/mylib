@@ -8,14 +8,14 @@
 
     <ul>
       <li>
-        <%= text_field_tag :login, "", class: 'form-control', placeholder: 'Login' %>
+        <%= text_field_tag :login, "", class: 'form-control', placeholder: t('.usuario') %>
       </li>
 
       <li>
-        <%= password_field_tag :password, "", class: 'form-control', placeholder: 'Password' %>
+        <%= password_field_tag :password, "", class: 'form-control', placeholder: t('.senha') %>
       </li>
 
-      <li id='btLogin'><%= submit_tag(t('.login'), class: 'btn btn-primary') %></li>
+      <li id='btLogin'><%= submit_tag(t('.entrar'), class: 'btn btn-primary') %></li>
     </ul>
   <% end %>
 </div>

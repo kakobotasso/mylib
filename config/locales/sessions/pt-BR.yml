@@ -1,6 +1,8 @@
 'pt-BR':
   sessions:
     new:
-      login: 'Entrar'
+      entrar: 'Entrar'
+      usuario: 'Usuário'
+      senha: 'Senha'
     errors:
       login: 'Usuário e/ou senha inválidos.'
