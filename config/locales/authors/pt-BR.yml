@@ -4,6 +4,7 @@
     novo: 'Novo autor'
     index:
       nome: 'Nome do autor'
+      quantidade: 'Quantidade de livros'
       editar: 'Editar autor'
       deletar: 'Deletar autor'
       confirmacao: 'Tem certeza que deseja excluir este autor?'
