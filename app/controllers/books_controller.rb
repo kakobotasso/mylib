@@ -1,9 +1,11 @@
 class BooksController < ApplicationController
   def index
+    @title = I18n.t('books.index.title')
     @books = Book.all
   end
 
   def new
+    @title = I18n.t('books.new.title')
     @book = Book.new
     @authors = Author.order(:name)
   end
@@ -20,6 +22,7 @@ class BooksController < ApplicationController
   end
 
   def edit
+    @title = I18n.t('books.edit.title')
     @book = Book.find(params[:id])
     @authors = Author.order(:name)
   end

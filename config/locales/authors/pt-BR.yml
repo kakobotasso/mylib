@@ -3,10 +3,14 @@
     voltar: 'Voltar'
     novo: 'Novo autor'
     index:
+      title: 'Autores'
       nome: 'Nome do autor'
       quantidade: 'Quantidade de livros'
       editar: 'Editar autor'
       deletar: 'Deletar autor'
       confirmacao: 'Tem certeza que deseja excluir este autor?'
+    new:
+      title: 'Novo autor'
     edit:
+      title: 'Editar autor'
       editar: 'Editar autor'

@@ -5,6 +5,7 @@
     voltar: 'Voltar'
     novo: 'Novo livro'
     index:
+      title: 'Livros'
       nome: 'Nome do livro'
       editar: 'Editar livro'
       deletar: 'Deletar livro'
@@ -13,7 +14,10 @@
       lista: 'Lista de Desejos?'
       lido: 'Lido?'
       confirmacao: 'Tem certeza que deseja excluir este livro?'
+    new:
+      title: 'Novo livro'
     edit:
+      title: 'Editar livro'
       editar: 'Editar livro'
     form:
       selecione: 'Selecione um autor'

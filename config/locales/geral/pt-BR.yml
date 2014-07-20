@@ -2,3 +2,4 @@
   geral:
     'true': 'Sim'
     'false': 'Não'
+    app_name: 'MyLib'

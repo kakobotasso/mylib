@@ -1,9 +1,11 @@
 class AuthorsController < ApplicationController
   def index
+    @title = I18n.t('authors.index.title')
   	@authors = Author.all
   end
 
   def new
+    @title = I18n.t('authors.new.title')
   	@author = Author.new
   end
 
@@ -18,6 +20,7 @@ class AuthorsController < ApplicationController
   end
 
   def edit
+    @title = I18n.t('authors.edit.title')
     @author = Author.find(params[:id])
   end
 
