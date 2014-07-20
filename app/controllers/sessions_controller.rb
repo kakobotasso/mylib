@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_path
     else
-      flash.now[:notice] = "There was a mistake here. Please, try again"
+      flash.now[:notice] = I18n.t('sessions.errors.login')
       render :new
     end
   end

@@ -1,19 +1,23 @@
-<%= form_tag login_path do %>
-  <% if flash[:notice] %>
-    <div id="errorNotice"><%= flash[:notice] %></div>
+<div class="center-block">
+  <%= form_tag login_path do %>
+    <% if flash[:notice] %>
+      <div id="errorNotice">
+        <p class="bg-danger"><%= flash[:notice] %></p>
+      </div>
+    <% end %>
+
+    <ul>
+      <li>
+        <span>Login:</span>
+        <%= text_field_tag :login, "", :class => "text" %>
+      </li>
+
+      <li>
+        <span>Password:</span>
+        <%= password_field_tag :password, "", :class => "text" %>
+      </li>
+
+      <li><%= submit_tag(t('.login'), id: 'login', class: 'btn btn-primary') %></li>
+    </ul>
   <% end %>
-
-  <ul>
-    <li>
-      <span>Login:</span>
-      <%= text_field_tag :login, "", :class => "text" %>
-    </li>
-
-    <li>
-      <span>Password:</span>
-      <%= password_field_tag :password, "", :class => "text" %>
-    </li>
-
-    <li><%= submit_tag("Login", id: 'login', class: 'btn btn-primary') %></li>
-  </ul>
-<% end %>
+</div>
