@@ -1,0 +1,8 @@
+'pt-BR':
+  dashboard:
+    index:
+      ultimos_adicionados: 'Últimos livros adicionados'
+      ultimos_lidos: 'Últimos livros lidos'
+      ultimos_autores: 'Ultimos autores adicionados'
+      ver_livros: 'Ver todos os livros'
+      ver_autores: 'Ver todos os autores'

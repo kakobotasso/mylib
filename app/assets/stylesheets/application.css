@@ -19,3 +19,9 @@
   width:998px;
   margin:0 auto;
 }
+
+.separaDivs{
+  float:left;
+  width:100%;
+  padding:30px 0px 0px 0px;
+}

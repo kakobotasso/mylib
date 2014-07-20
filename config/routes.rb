@@ -9,4 +9,9 @@ Rails.application.routes.draw do
     post "/",  :action => :create,  :as => false
     get  "/logout", :action => :destroy, :as => :logout
   end
+
+  controller :dashboard do
+    get "/welcome", action: :index, as: :dashboard 
+  end
+
 end
