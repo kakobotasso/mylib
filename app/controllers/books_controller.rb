@@ -52,6 +52,6 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:name, :author_id, :grade, :wishlist, :link, :read).merge!({user_id: session[:user_id]})
+    params.require(:book).permit(:name, :author_id, :grade, :wishlist, :link, :read).merge!({user_id: session[:user_id], slug: params[:book][:name].parameterize})
   end
 end
