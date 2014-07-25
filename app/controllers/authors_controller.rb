@@ -3,7 +3,7 @@ class AuthorsController < ApplicationController
   
   def index
     @title = I18n.t('authors.index.title')
-  	@authors = Author.where(user_id: @current_user)
+  	@authors = Author.where(user_id: @current_user).order(:name)
   end
 
   def new
