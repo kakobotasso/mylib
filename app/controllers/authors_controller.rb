@@ -44,6 +44,6 @@ class AuthorsController < ApplicationController
 
   private
   def author_params
-    params.require(:author).permit(:name).merge!({user_id: session[:user_id]})
+    params.require(:author).permit(:name).merge!({user_id: session[:user_id], slug: params[:author][:name].parameterize})
   end
 end
