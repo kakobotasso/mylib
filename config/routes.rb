@@ -14,5 +14,4 @@ Rails.application.routes.draw do
   controller :dashboard do
     get "/welcome", action: :index, as: :dashboard 
   end
-
 end

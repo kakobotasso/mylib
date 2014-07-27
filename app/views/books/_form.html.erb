@@ -17,12 +17,6 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :grade %>
-    <%= f.text_field :grade, class: 'form-control' %>
-    <br/>
-  </div>
-
-  <div class="form-group">
     <%= f.label :wishlist %> <br/>
     <%= f.radio_button :wishlist, true, checked: true %>
     <%= label :wishlist_true, t('books.sim') %>
@@ -43,6 +37,13 @@
     <%= label :read_true, t('books.sim') %>
     <%= f.radio_button :read, false, checked: true %>
     <%= label :read_false, t('books.nao') %>
+    <br/>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :grade %>
+    <div id="estrelas"></div>
+    <%#= f.text_field :grade, class: 'form-control' %>
     <br/>
   </div>
 

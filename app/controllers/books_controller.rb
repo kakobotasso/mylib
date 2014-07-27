@@ -10,6 +10,7 @@ class BooksController < ApplicationController
     @title = I18n.t('books.new.title')
     @book = Book.new
     @authors = Author.where(user_id: @current_user).order(:name)
+    gon.nota = 0
     if @authors.empty?
       redirect_to authors_path, alert: t('books.new.aviso') 
     end
@@ -30,6 +31,7 @@ class BooksController < ApplicationController
     @title = I18n.t('books.edit.title')
     @book = Book.find(params[:id])
     @authors = Author.where(user_id: @current_user).order(:name)
+    gon.nota = @book.grade || 0
   end
 
   def update

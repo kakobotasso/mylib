@@ -12,4 +12,8 @@ module ApplicationHelper
     I18n.t("geral.#{resultado}")
   end
 
+  def arredonda_nota(nota)
+    ('%.1f' % nota) if nota
+  end
+
 end
