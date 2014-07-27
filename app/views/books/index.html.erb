@@ -5,7 +5,6 @@
     <tr class="bg-livros">
       <th><%= t('.nome') %></th>
       <th><%= t('.autor') %></th>
-      <th><%= t('.nota') %></th>
       <th><%= t('.lista') %></th>
       <th><%= t('.lido') %></th>
       <th>&nbsp;</th>
@@ -17,7 +16,6 @@
         <tr>
           <td><%= link_to(b.name, b.link, target: '_blank') %></td>
           <td><%= b.author.name %></td>
-          <td><%= arredonda_nota(b.grade) %></td>
           <td><%= traduz_resultado(b.wishlist) %></td>
           <td><%= traduz_resultado(b.read) %></td>
           <td><%= link_to(t('.editar'), edit_book_path(b), class: 'btn btn-warning btn-sm') %></td>

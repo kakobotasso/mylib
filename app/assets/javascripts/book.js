@@ -10,4 +10,13 @@ $(function(){
       score: gon.nota
     }
   );
+
+  $("#grupoLido input").change(function(){
+    var valor = $(this).val();
+    if(valor === 'true'){
+      $("#grupoNotas").slideDown(500);
+    }else{
+      $("#grupoNotas").slideUp(500);
+    }
+  });
 });
