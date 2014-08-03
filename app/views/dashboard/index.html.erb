@@ -1,8 +1,21 @@
-<div>
-  <%= render 'tabela_livros', 
-        colecao: @ultimos_adicionados, 
-        titulo: t('.ultimos_adicionados'), 
-        vazio: t('.ultimos_adicionados_vazios') %>
+<%= render 'shared/flash_messages' %>
+
+<div class="separaDivs">
+  <div class="col-md-6">
+    <%= render 'tabela_livros', 
+          colecao: @ultimos_adicionados, 
+          titulo: t('.ultimos_adicionados'), 
+          vazio: t('.ultimos_adicionados_vazios'),
+          para_compra: true %>
+  </div>
+
+  <div class="col-md-6">
+    <%= render 'tabela_livros_comprados', 
+          colecao: @livros_comprados, 
+          titulo: t('.livros_comprados'), 
+          vazio: t('.livros_comprados_vazios'),
+          para_compra: false %>
+  </div>
 </div>
 
 <div class="separaDivs">
@@ -10,7 +23,8 @@
     <%= render 'tabela_livros', 
           colecao: @ultimos_lidos,
           titulo: t('.ultimos_lidos'),
-          vazio: t('.ultimos_lidos_vazio') %>
+          vazio: t('.ultimos_lidos_vazio'),
+          para_compra: false %>
   </div>
 
   <div class="col-md-6">

@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     get  "/logout", :action => :destroy, :as => :logout
   end
 
+  controller :books do
+    get "/comprei/:id", action: :bought, as: :bought
+  end
+
   controller :dashboard do
     get "/welcome", action: :index, as: :dashboard 
   end

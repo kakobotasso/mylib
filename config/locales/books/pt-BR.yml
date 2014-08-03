@@ -4,6 +4,8 @@
     nao: 'Não'
     voltar: 'Voltar'
     novo: 'Novo livro'
+    atualizado_sucesso: 'Livro atualizado com sucesso'
+    atualizado_falha: 'Falha ao atualizar livro. Tente novamente mais tarde.'
     index:
       title: 'Livros'
       nome: 'Nome do livro'
@@ -23,8 +25,6 @@
     edit:
       title: 'Editar livro'
       editar: 'Editar livro'
-    update:
-      atualizado_sucesso: 'Livro atualizado com sucesso'
     destroy:
       deletado_sucesso: 'Livro deletado com sucesso'
     form:

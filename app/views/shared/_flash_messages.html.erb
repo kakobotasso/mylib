@@ -9,3 +9,9 @@
     <p class="bg-success"><%= flash[:success] %></p>
   </div>
 <% end %>
+
+<% if flash[:failure] %>
+  <div id="errorNotice">
+    <p class="bg-danger"><%= flash[:failure] %></p>
+  </div>
+<% end %>

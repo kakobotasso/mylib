@@ -45,6 +45,17 @@ class BooksController < ApplicationController
     end 
   end
 
+  def bought
+    @book = Book.find(params[:id])
+    @book.wishlist = false
+
+    if @book.save
+      redirect_to dashboard_path, success: t('books.atualizado_sucesso')
+    else
+      redirect_to dashboard_path, failure: t('books.atualizado_falha')
+    end
+  end
+
   def destroy
     @book = Book.find(params[:id])
     @book.destroy

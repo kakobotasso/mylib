@@ -8,4 +8,10 @@ class Book < ActiveRecord::Base
   validates :link, presence: true 
   validates :read, inclusion: [true, false]
   validates :user_id, presence: true
+
+  scope :user, -> (user) { where(user_id: user) }
+  scope :read, -> { where(read: true) }
+  scope :bought, -> { where(wishlist: false) }
+  scope :wishlist, ->  { where(wishlist: true) }
+  scope :dashboard, -> { limit(5).order('id DESC') }
 end

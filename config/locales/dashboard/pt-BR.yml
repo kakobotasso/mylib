@@ -4,6 +4,8 @@
       title: 'Bem Vindo!'
       ultimos_adicionados: 'Últimos livros adicionados'
       ultimos_adicionados_vazios: 'Nenhum livro adicionado'
+      livros_comprados: 'Livros comprados'
+      livros_comprados_vazios: 'Nenhum livro comprado'
       ultimos_lidos: 'Últimos livros lidos'
       ultimos_lidos_vazio: 'Nenhum livro lido'
       ultimos_autores: 'Últimos autores adicionados'
@@ -11,6 +13,9 @@
     tabela_livros:
       ver_livros: 'Ver todos os livros'
       novo_livro: 'Adicionar um livro'
+      comprei: 'Comprei'
     tabela_autores:
       ver_autores: 'Ver todos os autores'
       novo_autor: 'Adicionar um autor'
+    tabela_livros_comprados:
+      ver_todos: 'Ver todos os livros'

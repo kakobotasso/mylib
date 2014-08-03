@@ -4,4 +4,7 @@ class Author < ActiveRecord::Base
 
   validates :name, presence: true
   validates :user_id, presence: true
+
+  scope :user, -> (user) { where(user_id: user) }
+  scope :dashboard, -> { limit(5).order('id DESC') }
 end
