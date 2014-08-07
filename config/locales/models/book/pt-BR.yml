@@ -10,3 +10,7 @@
         wishlist: 'Lista de desejos'
         link: 'Link'
         read: 'Lido'
+    errors:
+      book:
+        slug:
+          duplicated: 'Este livro já está cadastrado.'

@@ -5,3 +5,7 @@
     attributes:
       author:
         name: 'Nome'
+    errors:
+      author:
+        slug:
+          duplicated: 'Este autor já está cadastrado.'
