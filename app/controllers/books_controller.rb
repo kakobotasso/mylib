@@ -56,6 +56,10 @@ class BooksController < ApplicationController
     end
   end
 
+  def search
+    @books = Book.search(params[:search], @current_user)
+  end
+
   def destroy
     @book = Book.find(params[:id])
     @book.destroy

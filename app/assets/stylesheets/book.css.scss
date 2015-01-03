@@ -5,3 +5,14 @@
 #grupoNotas{
   display:none;
 }
+
+.searchBox{
+  float:left;
+  width:100%;
+
+  #searchField{
+    float:left;
+    width:90%;
+    margin:0px 10px 0px 0px;
+  }
+}

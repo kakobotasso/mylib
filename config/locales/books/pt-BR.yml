@@ -29,3 +29,6 @@
       deletado_sucesso: 'Livro deletado com sucesso'
     form:
       selecione: 'Selecione um autor'
+    search_box:
+      placeholder: 'Digite o nome do livro que deseja buscar'
+      buscar: 'Buscar'

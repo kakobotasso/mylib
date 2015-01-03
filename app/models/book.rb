@@ -15,4 +15,9 @@ class Book < ActiveRecord::Base
   scope :bought, -> { where(wishlist: false) }
   scope :wishlist, ->  { where(wishlist: true) }
   scope :dashboard, -> { limit(5).order('id DESC') }
+
+  def self.search(search, user)
+    search_condition = "%" + search + "%"
+    where(['name LIKE ? AND user_id = ?', search_condition, user])
+  end
 end

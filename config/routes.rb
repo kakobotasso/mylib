@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   end
 
   controller :books do
-    get "/comprei/:id", action: :bought, as: :bought
+    get "/bought/:id", action: :bought, as: :bought
+    get "/find-a-book/", action: :search, as: :books_search
   end
 
   controller :dashboard do
