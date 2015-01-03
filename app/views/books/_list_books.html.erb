@@ -1,21 +1,24 @@
 <table class="table table-bordered table-hover">
   <thead>
     <tr class="bg-livros">
+      <th colspan='5'><%= t('.todos') %></th>
+    </tr>
+    <tr class="bg-livros">
       <th><%= t('.nome') %></th>
       <th><%= t('.autor') %></th>
-      <th><%= t('.lista') %></th>
-      <th><%= t('.lido') %></th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
-    <% if @books.any? %>
-      <% @books.each do |b| %>
+    <% if @all_books.any? %>
+      <% @all_books.each do |b| %>
         <tr>
           <td><%= link_to(b.name, b.link, target: '_blank') %></td>
           <td><%= b.author.name %></td>
-          <td><%= traduz_resultado(b.wishlist) %></td>
-          <td><%= traduz_resultado(b.read) %></td>
+          <td><%= traduz_resultado(b.wishlist, 'wishlist') %></td>
+          <td><%= traduz_resultado(b.read, 'read') %></td>
           <td><%= link_to(t('.editar'), edit_book_path(b), class: 'btn btn-warning btn-sm') %></td>
         </tr>
       <% end %>

@@ -1,5 +1,9 @@
 'pt-BR':
   geral:
-    'true': 'Sim'
-    'false': 'Não'
+    wishlist:
+      'true': 'Comprado'
+      'false': 'Não comprado'
+    read:
+      'true': 'Lido'
+      'false': 'Não lido'
     app_name: 'MyLib'

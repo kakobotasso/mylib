@@ -17,6 +17,7 @@
       lido: 'Lido?'
       vazio: 'Nenhum livro cadastrado'
       confirmacao: 'Tem certeza que deseja excluir este livro?'
+      todos: 'Todos os livros'
     new:
       title: 'Novo livro'
       aviso: 'Você deve cadastrar um autor primeiro'

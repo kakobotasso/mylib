@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   
   def index
     @title = I18n.t('books.index.title')
-    @books = Book.where(user_id: @current_user).order(name: :desc)
+    @all_books = Book.where(user_id: @current_user).order(name: :desc)
   end
 
   def new

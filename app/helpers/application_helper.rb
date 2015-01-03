@@ -8,8 +8,8 @@ module ApplicationHelper
     end
   end
 
-  def traduz_resultado(resultado)
-    I18n.t("geral.#{resultado}")
+  def traduz_resultado(resultado, tipo)
+    I18n.t("geral.#{tipo}.#{resultado}")
   end
 
   def arredonda_nota(nota)
