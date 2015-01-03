@@ -6,7 +6,7 @@
     novo: 'Novo livro'
     atualizado_sucesso: 'Livro atualizado com sucesso'
     atualizado_falha: 'Falha ao atualizar livro. Tente novamente mais tarde.'
-    index:
+    list_books:
       title: 'Livros'
       nome: 'Nome do livro'
       editar: 'Editar livro'
@@ -32,3 +32,5 @@
     search_box:
       placeholder: 'Digite o nome do livro que deseja buscar'
       buscar: 'Buscar'
+    search:
+      todos: 'Todos os livros'
